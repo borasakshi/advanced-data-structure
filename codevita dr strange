@@ -1,0 +1,17 @@
+from string import punctuation
+a=list(punctuation)
+dit={}
+st=list(input())
+i=0
+for ch in st:
+    if ch in a:
+        dit[i]=ch
+        st.remove(ch)
+        i=i+1
+    i=i+1
+rev=st[::-1]
+for k,v in dit.items():
+    rev.insert(k,v)
+print("".join(rev))
+print(dit.items())
+
